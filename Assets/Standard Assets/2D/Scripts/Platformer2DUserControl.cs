@@ -23,6 +23,15 @@ namespace UnityStandardAssets._2D
                 // Read the jump input in Update so button presses aren't missed.
                 m_Jump = Input.GetButtonDown("Jump");
             }
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                m_Character.JumpPressed(true);
+            }
+            else if (Input.GetButtonUp("Jump"))
+            {
+                m_Character.JumpPressed(false);
+            }
         }
 
 
